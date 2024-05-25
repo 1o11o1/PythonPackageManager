@@ -7,6 +7,6 @@ The script fulfils the following function: The user receives an overview of whic
 
 The Streamlit-UI looks like this:
 
-
+-------------------------------------------------------------------------------------------------
 ![Streamlit - PaythonPackageManager_01](https://github.com/1o11o1/PythonPackageManager/assets/130406548/b2699678-6c47-4c47-93d4-5aad5cb22f04)
 ![Streamlit - PaythonPackageManager_02](https://github.com/1o11o1/PythonPackageManager/assets/130406548/7d0f2bb8-815d-4636-b540-fe51088109f2)
