@@ -131,13 +131,20 @@ else:
 # Anzeige veralteter Pakete
 st.header('Outdated Packages')
 if outdated_packages:
+    # Neuer Button zum Aktualisieren aller Pakete
+    if st.button('Update All Packages'):
+        for package, version, latest_version in outdated_packages:
+            update_package(package)
+            st.session_state.update_success[package] = f'{package} updated to version {latest_version}'
+        st.rerun()
+    
     for package, version, latest_version in outdated_packages:
         if st.session_state.get(f'update_{package}'):
             update_package(package)
             st.session_state.update_success[package] = f'{package} updated to version {latest_version}'
             del st.session_state[f'update_{package}']
             st.rerun()
-        
+            
         col1, col2, col3, col4 = st.columns([2, 2, 2, 2])
         with col1:
             st.markdown(package)
